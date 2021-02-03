@@ -30,12 +30,12 @@ function TableOfContents($content, $depth){
     '.$heads.'
     </ul>
     </div>';
-    echo $contents;
+    return $contents;
   }else{
-    echo '';
+    return '';
   }
 }
 function Insert_htag($content, $depth){
   $heads = preg_replace_callback('#<h([1-'.$depth.'])>(.*?)<\/h[1-'.$depth.']>#si', 'add_htag', $content);
-  echo $heads;
+  return $heads;
 }
